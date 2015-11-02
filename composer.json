@@ -1,0 +1,50 @@
+{
+    "name": "Ilkovich/OAuthIO",
+    "description": "Laravel 5 integration for oauth-io",
+    "keywords": [
+        "laravel",
+        "oauth", 
+        "oauth-io"
+    ],
+    "homepage": "https://github.com/ilkovich/OAuthIO",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Daniel Ilkovich",
+            "email": "ilkovich@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "illuminate/support": "~5.1",
+        "php" : ">=5.3.0",
+        "oauth-io/oauth": "0.3.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit" : "4.*",
+        "scrutinizer/ocular": "~1.1",
+        "mockery/mockery": "^0.9.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Ilkovich\\OAuthIO\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Ilkovich\\OAuthIO\\Test\\": "tests"
+        },
+		"classmap": [
+			"tests/TestCase.php"
+		]
+    },
+    "scripts": {
+        "test": "phpunit"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    },
+    "minimum-stability":"dev"
+}
