@@ -1,5 +1,5 @@
 {
-    "name": "Ilkovich/OAuthIO",
+    "name": "ilkovich/laravel-oauthio",
     "description": "Laravel 5 integration for oauth-io",
     "keywords": [
         "laravel",
@@ -16,7 +16,6 @@
         }
     ],
     "require": {
-        "illuminate/support": "~5.1",
         "php" : ">=5.3.0",
         "oauth-io/oauth": "0.3.0"
     },

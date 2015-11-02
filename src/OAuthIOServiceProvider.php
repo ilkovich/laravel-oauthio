@@ -3,6 +3,7 @@
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Routing\Router;
 use OAuth_io\OAuth;
+use Session;
 
 class OAuthIOServiceProvider extends ServiceProvider
 {
@@ -59,7 +60,9 @@ class OAuthIOServiceProvider extends ServiceProvider
     public function register()
     {
         $this->app->singleton('ilkovich.oauthio',function($app){
-            $oauthio = new OAuth();
+            Session::set('__OAuthIO', []);
+            $arr = Session::get('__OAuthIO');
+            $oauthio = new OAuth($arr);
             $oauthio->initialize($app['config']['oauthio.key'], $app['config']['oauthio.secret']);
             return $oauthio;
         });
